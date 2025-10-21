@@ -45,13 +45,38 @@ export function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Simular envio do formulário
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Criar FormData para envio
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone);
+      formData.append('company', data.company || '');
+      formData.append('projectType', data.projectType);
+      formData.append('quantity', data.quantity);
+      formData.append('message', data.message);
       
-      toast.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      // Adicionar arquivo se existir
+      if (data.file && data.file.length > 0) {
+        formData.append('file', data.file[0]);
+      }
+
+      // Enviar para API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Erro ao enviar formulário');
+      }
+
+      toast.success('Orçamento enviado com sucesso! Você receberá uma confirmação por email.');
       reset();
     } catch (error) {
-      toast.error('Erro ao enviar mensagem. Tente novamente.');
+      console.error('Erro ao enviar formulário:', error);
+      toast.error(error instanceof Error ? error.message : 'Erro ao enviar orçamento. Tente novamente.');
     } finally {
       setIsSubmitting(false);
     }
@@ -184,26 +209,6 @@ export function ContactForm() {
               ))}
             </div>
 
-            {/* AI Chat CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 1.4 }}
-              className="bg-gradient-to-r from-gold-500/10 to-gold-600/10 border border-gold-500/20 rounded-xl p-4 sm:p-6"
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                <MessageCircle className="h-6 w-6 text-gold-500" />
-                <h4 className="text-base sm:text-lg font-bold text-white">
-                  Chat com IA
-                </h4>
-              </div>
-              <p className="text-gray-300 text-xs sm:text-sm mb-4">
-                Tire suas dúvidas instantaneamente com nosso assistente inteligente.
-              </p>
-              <button className="text-gold-400 hover:text-gold-300 font-medium transition-colors duration-300 text-sm sm:text-base touch-manipulation">
-                Iniciar Conversa →
-              </button>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
@@ -340,8 +345,18 @@ export function ContactForm() {
                     type="file"
                     accept=".pdf"
                     className="hidden"
+                    id="file-upload"
                   />
+                  <label 
+                    htmlFor="file-upload" 
+                    className="inline-block mt-3 px-4 py-2 bg-gold-500/10 text-gold-400 rounded-lg cursor-pointer hover:bg-gold-500/20 transition-colors duration-300"
+                  >
+                    Selecionar Arquivo
+                  </label>
                 </div>
+                {errors.file && (
+                  <p className="text-red-400 text-sm mt-1">{errors.file.message as string}</p>
+                )}
               </div>
 
               {/* Mensagem */}
