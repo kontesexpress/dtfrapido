@@ -18,29 +18,25 @@ const knowledgeBase = {
   price: {
     keywords: ['preço', 'valor', 'custo', 'quanto custa', 'orçamento', 'tabela de preços'],
     responses: [
-      '💰 Nossos preços variam conforme a quantidade e complexidade do pedido. Para um orçamento personalizado, me informe:\n• Quantidade de peças\n• Tipo de produto (camiseta, moletom, etc.)\n• Tamanho da estampa\n\nPosso te ajudar a calcular o valor aproximado!',
-      '💵 Não temos valor mínimo! Você pode fazer desde 1 peça. Para pedidos pequenos (até 5 peças), aplicamos uma taxa mínima de R$ 15,00. Quer que eu calcule o valor do seu pedido?'
+      '💰 Nosso preço é de R$ 60,00 por metro de DTF. Caso tenha projetos muito volumosos recomendo entrar em contato com nossos, Nossa equipe de especialistas está disponível no WhatsApp para te ajudar: https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.',
     ]
   },
   deadline: {
     keywords: ['prazo', 'tempo', 'quando fica pronto', 'entrega', 'demora', 'urgente'],
     responses: [
-      '⏰ Nossos prazos são:\n• Pedidos simples: 3-5 dias úteis\n• Pedidos grandes (50+ peças): 7-10 dias úteis\n• Urgência: Consulte disponibilidade\n\nQual tipo de pedido você tem em mente?',
-      '🚀 Para pedidos urgentes, temos opções express! Me conte mais detalhes sobre seu projeto e posso verificar a viabilidade.'
+      '⏰ Nossos prazos são extremamente ágeis, nós temos a capacidade de fazer até 24h, mas geralmente entregamos adiantados rsrsrs, é possível solicitar o pedido na parte da manhã e retirar no período da tarde.',
     ]
   },
   technology: {
     keywords: ['dtf', 'tecnologia', 'como funciona', 'diferenca', 'dtg', 'sublimação'],
     responses: [
-      '🔬 A impressão DTF (Direct to Film) é nossa especialidade! É uma tecnologia que:\n• Transfere imagens para filmes especiais\n• Aplica com prensa térmica em qualquer tecido\n• Oferece cores vibrantes e durabilidade superior\n• Funciona em tecidos escuros e claros\n\nQuer saber mais sobre algum aspecto específico?',
-      '⚡ DTF vs outras técnicas:\n• Mais durável que DTG\n• Cores mais vibrantes que sublimação\n• Funciona em qualquer cor de tecido\n• Maior resistência à lavagem\n\nTem alguma dúvida específica sobre a tecnologia?'
+      '🔬 A impressão DTF (Direct to Film) é nossa especialidade! É uma tecnologia que:\n• Transfere imagens para filmes especiais\n• Aplica com prensa térmica em qualquer tecido\n• Oferece cores vibrantes e durabilidade superior\n• Funciona em tecidos escuros e claros\n\n Nosso DTF tem o diferencial que pode retirar QUENTE, ou seja, entrega muito mais ágeis de seu produto! \n\n Quer saber mais sobre algum aspecto específico?',
     ]
   },
   materials: {
     keywords: ['tecido', 'material', 'algodão', 'poliéster', 'tipo de roupa', 'camiseta', 'moletom'],
     responses: [
-      '👕 Trabalhamos com diversos materiais:\n• Algodão (100% ou misturas)\n• Poliéster\n• Viscose e Modal\n• Moletons e sweatshirts\n\nO DTF funciona melhor em tecidos com pelo menos 80% de algodão ou poliéster. Que tipo de produto você tem em mente?',
-      '🧵 Para garantir a melhor qualidade, recomendamos:\n• Algodão 100% ou misturas\n• Poliéster puro ou misturas\n• Evitar tecidos muito finos ou elásticos\n\nPosso te orientar sobre o melhor material para seu projeto!'
+      '👕 Trabalhamos com diversos materiais:\n• Algodão (100% ou misturas)\n• Poliéster\n• Spandex\n• Moletons e sweatshirts\n Corta ventos \n Camisetas \n Bonés \n Bolsas \n E muito mais! \n O DTF funciona melhor em tecidos com pelo menos 80% de algodão ou poliéster. Que tipo de produto você tem em mente?',
     ]
   },
   quality: {
@@ -53,15 +49,14 @@ const knowledgeBase = {
   order: {
     keywords: ['pedido', 'como fazer', 'processo', 'passo a passo', 'como encomendar'],
     responses: [
-      '📋 Para fazer seu pedido é simples:\n1️⃣ Envie seu arquivo (PNG, JPG, PDF, AI)\n2️⃣ Informe quantidade e tipo de produto\n3️⃣ Receba orçamento em até 2h\n4️⃣ Aprove o orçamento\n5️⃣ Produzimos e entregamos\n\nQuer começar agora? Me envie os detalhes!',
-      '🎯 Nosso processo é rápido e transparente:\n• Orçamento gratuito e sem compromisso\n• Aprovação antes da produção\n• Acompanhamento do pedido\n• Entrega segura\n\nVamos começar seu projeto?'
+      '📋 Para fazer seu pedido é simples:\n1️⃣ Envie seu arquivo (PDF)\n2️⃣ Receba orçamento em até 2h\n3️⃣ Aprove o orçamento\n4️⃣ Produzimos e entregamos(Envio ou retirada)\n\n',
+      '🎯 Nosso processo é rápido e transparente:\n• Orçamento gratuito e sem compromisso\n• Aprovação antes da produção\n• Acompanhamento do pedido\n• Entrega segura\n\n'
     ]
   },
   contact: {
     keywords: ['contato', 'telefone', 'whatsapp', 'endereço', 'localização'],
     responses: [
-      '📞 Nossos contatos:\n• WhatsApp: (11) 99999-9999\n• Telefone: (11) 3333-3333\n• Email: contato@kontesexpress.com\n• Endereço: R. Bresser, 601 - Brás, SP\n\nPrefere falar diretamente? Posso te conectar com nossa equipe!',
-      '📍 Estamos localizados no Brás, São Paulo, com fácil acesso por transporte público. Também fazemos entregas em toda a região metropolitana!'
+      '📞 Nossos contatos:\n• WhatsApp: (11) 91900-9112\n• Email: contato@kontesexpress.com\n• Endereço: R. Bresser, 601 - Brás, SP\n\n',
     ]
   },
   whatsapp: {

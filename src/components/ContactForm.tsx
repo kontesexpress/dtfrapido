@@ -66,7 +66,18 @@ export function ContactForm() {
         body: formData,
       });
 
-      const result = await response.json();
+      // Verificar se a resposta é JSON válido
+      let result;
+      try {
+        const responseText = await response.text();
+        if (!responseText) {
+          throw new Error('Resposta vazia do servidor');
+        }
+        result = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error('Erro ao fazer parse da resposta:', parseError);
+        throw new Error('Erro de comunicação com o servidor. Tente novamente.');
+      }
 
       if (!response.ok) {
         throw new Error(result.error || 'Erro ao enviar formulário');

@@ -4,16 +4,23 @@ import { NextRequest, NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key-for-build');
 
 export async function POST(request: NextRequest) {
+  console.log('📧 Iniciando processamento do formulário de contato');
+  
   try {
     // Verificar se a API key está configurada
     if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dummy-key-for-build') {
+      console.error('❌ API key do Resend não configurada');
       return NextResponse.json(
-        { error: 'API key do Resend não configurada. Configure a variável RESEND_API_KEY.' },
+        { 
+          success: false,
+          error: 'API key do Resend não configurada. Configure a variável RESEND_API_KEY.' 
+        },
         { status: 500 }
       );
     }
 
     const formData = await request.formData();
+    console.log('📋 FormData recebido com sucesso');
     
     // Extrair dados do formulário
     const name = formData.get('name') as string;
@@ -25,10 +32,48 @@ export async function POST(request: NextRequest) {
     const message = formData.get('message') as string;
     const file = formData.get('file') as File;
 
+    console.log('📝 Dados extraídos:', { 
+      name, 
+      email, 
+      phone, 
+      company, 
+      projectType, 
+      quantity, 
+      messageLength: message?.length,
+      fileName: file?.name,
+      fileSize: file?.size
+    });
+
     // Validar dados obrigatórios
     if (!name || !email || !phone || !projectType || !quantity || !message || !file) {
       return NextResponse.json(
-        { error: 'Todos os campos obrigatórios devem ser preenchidos' },
+        { 
+          success: false,
+          error: 'Todos os campos obrigatórios devem ser preenchidos' 
+        },
+        { status: 400 }
+      );
+    }
+
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { 
+          success: false,
+          error: 'Email inválido' 
+        },
+        { status: 400 }
+      );
+    }
+
+    // Validar tamanho do arquivo (máximo 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      return NextResponse.json(
+        { 
+          success: false,
+          error: 'Arquivo muito grande. Máximo 10MB permitido.' 
+        },
         { status: 400 }
       );
     }
@@ -98,18 +143,24 @@ export async function POST(request: NextRequest) {
     `;
 
     // Enviar email para a empresa
-    const emailToCompany = await resend.emails.send({
-      from: 'noreply@resend.dev',
-      to: ['kontesexpress@gmail.com'],
-      subject: `🎨 Novo Orçamento DTF - ${name} (${projectType})`,
-      html: emailHtml,
-      attachments: [
-        {
-          filename: `arte-dtf-${name.replace(/\s+/g, '-').toLowerCase()}.pdf`,
-          content: fileBase64,
-        }
-      ]
-    });
+    let emailToCompany;
+    try {
+      emailToCompany = await resend.emails.send({
+        from: 'noreply@resend.dev',
+        to: ['kontesexpress@gmail.com'],
+        subject: `🎨 Novo Orçamento DTF - ${name} (${projectType})`,
+        html: emailHtml,
+        attachments: [
+          {
+            filename: `arte-dtf-${name.replace(/\s+/g, '-').toLowerCase()}.pdf`,
+            content: fileBase64,
+          }
+        ]
+      });
+    } catch (emailError) {
+      console.error('Erro ao enviar email para empresa:', emailError);
+      // Continuar mesmo se o email falhar
+    }
 
     // Email de confirmação para o cliente
     const confirmationHtml = `
@@ -160,26 +211,40 @@ export async function POST(request: NextRequest) {
     `;
 
     // Enviar email de confirmação para o cliente
-    const emailToClient = await resend.emails.send({
-      from: 'noreply@resend.dev',
-      to: [email],
-      subject: '✅ Orçamento DTF Recebido - Kontes Express',
-      html: confirmationHtml,
-    });
+    let emailToClient;
+    try {
+      emailToClient = await resend.emails.send({
+        from: 'noreply@resend.dev',
+        to: [email],
+        subject: '✅ Orçamento DTF Recebido - Kontes Express',
+        html: confirmationHtml,
+      });
+    } catch (emailError) {
+      console.error('Erro ao enviar email de confirmação:', emailError);
+      // Continuar mesmo se o email de confirmação falhar
+    }
 
+    console.log('✅ Formulário processado com sucesso');
+    
     return NextResponse.json(
       { 
         success: true, 
         message: 'Orçamento enviado com sucesso!',
-        emailId: emailToCompany.data?.id 
+        emailId: emailToCompany?.data?.id 
       },
       { status: 200 }
     );
 
   } catch (error) {
     console.error('Erro ao processar formulário:', error);
+    
+    // Retornar resposta JSON válida mesmo em caso de erro
     return NextResponse.json(
-      { error: 'Erro interno do servidor. Tente novamente.' },
+      { 
+        success: false,
+        error: 'Erro interno do servidor. Tente novamente.',
+        details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined
+      },
       { status: 500 }
     );
   }
