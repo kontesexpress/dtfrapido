@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dtfrapido.com/sitemap.xml",
+    sitemap: "https://dtfrapido.com.br/sitemap.xml",
   };
 }

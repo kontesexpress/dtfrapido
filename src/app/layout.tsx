@@ -78,7 +78,7 @@ export default function RootLayout({
         <meta property="og:description" content="Impressão DTF Premium com brilho, cor e precisão impecável. Tecnologia de ponta para estampas personalizadas de alta qualidade." />
         <meta property="og:image" content="/images/logo-Kontes.png.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dtfrapido.com" />
+        <meta property="og:url" content="https://dtfrapido.com.br" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

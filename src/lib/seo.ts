@@ -32,8 +32,8 @@ export const defaultSEO: SEOConfig = {
     'entrega rápida',
     'orçamento grátis',
   ],
-  canonical: 'https://dtfrapido.com',
-  ogImage: 'https://dtfrapido.com/images/og-image.jpg',
+  canonical: 'https://dtfrapido.com.br',
+  ogImage: 'https://dtfrapido.com.br/images/og-image.jpg',
 };
 
 export function generateMetadata(config: Partial<SEOConfig> = {}): Metadata {
@@ -54,7 +54,7 @@ export function generateMetadata(config: Partial<SEOConfig> = {}): Metadata {
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://dtfrapido.com'),
+    metadataBase: new URL('https://dtfrapido.com.br'),
     alternates: {
       canonical: seo.canonical || defaultSEO.canonical,
     },
@@ -115,7 +115,7 @@ export function generateMetadata(config: Partial<SEOConfig> = {}): Metadata {
       'DC.language': 'pt-BR',
       'DC.type': 'Text',
       'DC.format': 'text/html',
-      'DC.identifier': seo.canonical || defaultSEO.canonical || 'https://dtfrapido.com',
+      'DC.identifier': seo.canonical || defaultSEO.canonical || 'https://dtfrapido.com.br',
       'DC.coverage': 'São Paulo, SP, Brasil',
       'DC.rights': '© 2025 Kontes Express. Todos os direitos reservados.',
     },

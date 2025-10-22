@@ -9,9 +9,9 @@ export const baseSchema = {
   name: 'DTF Rápido by Kontes Express',
   alternateName: 'Kontes Express',
   description: 'Impressão DTF Premium com brilho, cor e precisão impecável. Tecnologia de ponta para estampas personalizadas de alta qualidade.',
-  url: 'https://dtfrapido.com',
-  logo: 'https://dtfrapido.com/images/logo.png',
-  image: 'https://dtfrapido.com/images/og-image.jpg',
+  url: 'https://dtfrapido.com.br',
+  logo: 'https://dtfrapido.com.br/images/logo.png',
+  image: 'https://dtfrapido.com.br/images/og-image.jpg',
   telephone: '+55-11-91900-9112',
   email: 'kontesexpress@gmail.com',
   address: {
@@ -143,7 +143,7 @@ export const baseSchema = {
       '@type': 'ReserveAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://dtfrapido.com/contact',
+        urlTemplate: 'https://dtfrapido.com.br/contact',
         actionPlatform: [
           'https://schema.org/DesktopWebPlatform',
           'https://schema.org/MobileWebPlatform',
@@ -158,7 +158,7 @@ export const baseSchema = {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://dtfrapido.com/search?q={search_term_string}',
+        urlTemplate: 'https://dtfrapido.com.br/search?q={search_term_string}',
         actionPlatform: [
           'https://schema.org/DesktopWebPlatform',
           'https://schema.org/MobileWebPlatform',
@@ -170,12 +170,12 @@ export const baseSchema = {
   mainEntity: {
     '@type': 'WebSite',
     name: 'DTF Rápido by Kontes Express',
-    url: 'https://dtfrapido.com',
+    url: 'https://dtfrapido.com.br',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://dtfrapido.com/search?q={search_term_string}',
+        urlTemplate: 'https://dtfrapido.com.br/search?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -186,12 +186,12 @@ export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'DTF Rápido by Kontes Express',
-  url: 'https://dtfrapido.com',
+  url: 'https://dtfrapido.com.br',
   description: 'Impressão DTF Premium com brilho, cor e precisão impecável',
   publisher: {
     '@type': 'Organization',
     name: 'Kontes Express',
-    url: 'https://dtfrapido.com',
+    url: 'https://dtfrapido.com.br',
   },
   potentialAction: {
     '@type': 'SearchAction',
@@ -226,7 +226,7 @@ export const productSchema = (product: {
   '@type': 'Product',
   name: product.name,
   description: product.description,
-  image: product.image || 'https://dtfrapido.com/images/product-default.jpg',
+  image: product.image || 'https://dtfrapido.com.br/images/product-default.jpg',
   offers: {
     '@type': 'Offer',
     price: product.price,

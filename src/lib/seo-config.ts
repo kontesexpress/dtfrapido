@@ -4,11 +4,11 @@ export const seoConfig = {
   // Site Information
   site: {
     name: 'DTF Rápido by Kontes Express',
-    url: 'https://dtfrapido.com',
+    url: 'https://dtfrapido.com.br',
     description: 'Impressão DTF Premium com brilho, cor e precisão impecável. Tecnologia de ponta para estampas personalizadas de alta qualidade.',
-    logo: 'https://dtfrapido.com/images/logo.png',
-    ogImage: 'https://dtfrapido.com/images/og-image.jpg',
-    favicon: 'https://dtfrapido.com/favicon.ico',
+    logo: 'https://dtfrapido.com.br/images/logo.png',
+    ogImage: 'https://dtfrapido.com.br/images/og-image.jpg',
+    favicon: 'https://dtfrapido.com.br/favicon.ico',
   },
 
   // Business Information
@@ -196,7 +196,7 @@ export const seoConfig = {
       name: 'DTF Rápido by Kontes Express',
       address: 'São Paulo, SP, Brasil',
       phone: '+55-11-91900-9112',
-      website: 'https://dtfrapido.com',
+      website: 'https://dtfrapido.com.br',
       categories: ['Printing Service', 'Custom Apparel', 'Textile Printing'],
     },
     schema: {
