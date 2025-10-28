@@ -50,11 +50,12 @@ export function DTFMachine3D() {
       {/* Máquina DTF 3D com CSS */}
       <div className="relative">
         {/* Base da máquina */}
-        <div className="w-48 h-32 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-2xl transform perspective-1000">
+        <div className="w-64 h-40 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-2xl transform perspective-1000">
           {/* Painel de controle */}
-          <div className="absolute top-4 left-4 w-16 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg">
+          <div className="absolute top-4 left-4 w-18 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-sm shadow-lg">
             <div className="w-2 h-2 bg-green-400 rounded-full absolute top-1 left-1 animate-pulse"></div>
-            <div className="w-1 h-1 bg-yellow-400 rounded-full absolute top-1 right-1"></div>
+            <div className="w-2 h-2 bg-yellow-400 rounded-full absolute top-1 left-5 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="w-2 h-2 bg-red-400 rounded-full absolute top-1 left-9 animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
           
           {/* Display */}
@@ -63,13 +64,13 @@ export function DTFMachine3D() {
           </div>
           
           {/* Entrada de papel */}
-          <div className="absolute bottom-4 left-4 w-32 h-4 bg-gray-700 rounded-sm">
+          <div className="absolute bottom-4 left-4 w-36 h-4 bg-gray-700 rounded-sm">
             <div className="w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent animate-pulse"></div>
           </div>
           
           {/* Saída de impressão */}
-          <div className="absolute bottom-4 right-4 w-24 h-4 bg-gray-700 rounded-sm">
-            <div className="w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-sm animate-pulse"></div>
+          <div className="absolute bottom-4 right-4 w-28 h-4 bg-gray-700 rounded-sm">
+            <div className="w-10 h-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-sm animate-pulse"></div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
+import Image from 'next/image';
 import { Sun, Zap, Shield, Star, Sparkles, Award, Circle, Square, Triangle, Palette } from 'lucide-react';
 
 export function DTFUVSection() {
@@ -70,7 +71,7 @@ export function DTFUVSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-dark-800 to-dark-900">
+    <section id="dtfuv" className="py-20 bg-gradient-to-b from-dark-800 to-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -117,8 +118,36 @@ export function DTFUVSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
+          {/* Destaque visual DTF UV */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="md:col-span-2 lg:col-span-1 lg:row-span-2 bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl overflow-hidden"
+          >
+            <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px]">
+              <Image
+                src="/images/DtfUV.webp"
+                alt="DTF UV - Exemplo de aplicação com brilho"
+                width={1200}
+                height={800}
+                className="w-full h-full object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="bg-gold-500/20 backdrop-blur-sm rounded-lg p-4 border border-gold-500/30">
+                  <h3 className="text-lg font-bold text-gold-300 mb-2">DTF UV Premium</h3>
+                  <p className="text-sm text-gray-300">
+                    Tecnologia de ponta com cura UV instantânea e efeitos especiais únicos
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           {uvFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -127,7 +156,7 @@ export function DTFUVSection() {
               transition={{ duration: 0.6, delay: 1.0 + index * 0.2 }}
               className="group bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-6 hover:border-gold-500/40 transition-all duration-300 hover:transform hover:scale-105"
             >
-              <div className="flex flex-col items-center text-center space-y-4">
+              <div className="flex flex-col items-center text-center space-y-4 h-full">
                 <div className="p-4 bg-gold-500/10 rounded-full group-hover:bg-gold-500/20 transition-colors duration-300">
                   <feature.icon className="h-8 w-8 text-gold-500 group-hover:text-gold-400 transition-colors duration-300" />
                 </div>
@@ -136,7 +165,7 @@ export function DTFUVSection() {
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 flex-grow">
                   {feature.description}
                 </p>
               </div>

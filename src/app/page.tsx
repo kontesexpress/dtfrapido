@@ -4,9 +4,10 @@ import { Hero } from '@/components/Hero';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { WhatIsDTF } from '@/components/WhatIsDTF';
-import { Advantages } from '@/components/Advantages';
+import { DTFUVSection } from '@/components/DTFUVSection';
 import { PortfolioGrid } from '@/components/PortfolioGrid';
-import { ContactForm } from '@/components/ContactForm';
+import { HotPeelQuality } from '@/components/HotPeelQuality';
+import { PDFSpecs } from '@/components/PDFSpecs';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { GoogleReviewsSimple } from '@/components/GoogleReviewsSimple';
 import { AboutSection } from '@/components/AboutSection';
@@ -21,11 +22,12 @@ export default function Home() {
       <main>
         <Hero />
         <WhatIsDTF />
-        <Advantages />
+        <DTFUVSection />
         <PortfolioGrid />
+        <HotPeelQuality />
+        <PDFSpecs />
         <GoogleReviewsSimple />
         <AboutSection />
-        <ContactForm />
       </main>
       <Footer />
       <WhatsAppButton />

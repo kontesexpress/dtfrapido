@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
-import { Zap, Palette, Shield, Clock } from 'lucide-react';
+import { VideoPlayer } from './VideoPlayer';
+import { Zap, Palette, Shield, Clock, ArrowRight } from 'lucide-react';
 
 export function WhatIsDTF() {
   const [ref, inView] = useInViewSSR({
@@ -108,48 +109,100 @@ export function WhatIsDTF() {
             <span className="gradient-text-gold">processo DTF?</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Impressão',
-                description: 'Sua arte é impressa em filme especial com tinta DTF de alta qualidade.',
-              },
-              {
-                step: '02',
-                title: 'Aplicação',
-                description: 'O filme é aplicado diretamente na peça com temperatura e pressão controladas.',
-              },
-              {
-                step: '03',
-                title: 'Resultado',
-                description: 'O filme é removido imediatamente, revelando sua estampa perfeita sem tempo de espera.',
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.4 + index * 0.2 }}
-                className="relative"
-              >
-                <div className="bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-8 text-center">
-                  <div className="text-4xl font-bold gradient-text-gold mb-4">
-                    {step.step}
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-4">
-                    {step.title}
-                  </h4>
-                  <p className="text-gray-400">
-                    {step.description}
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Vídeo do Processo */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="order-2 lg:order-1"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <VideoPlayer
+                  src="/videos/Impressao.mp4"
+                  className="aspect-video"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                  controls={true}
+                  lazy={true}
+                />
                 
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gold-500/50 transform -translate-y-1/2" />
-                )}
-              </motion.div>
-            ))}
+                {/* Overlay com informações */}
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-gold-500/20 backdrop-blur-sm rounded-lg p-4 border border-gold-500/30">
+                    <h4 className="text-lg font-bold text-gold-300 mb-2">Processo de Impressão DTF</h4>
+                    <p className="text-sm text-gray-300">
+                      Máquina imprimindo sua arte em filme especial com alta qualidade
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Passos do Processo */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="order-1 lg:order-2 space-y-6"
+            >
+              {[
+                {
+                  step: '01',
+                  title: 'Impressão',
+                  description: 'Sua arte é impressa em filme especial com tinta DTF de alta qualidade.',
+                  icon: Palette,
+                },
+                {
+                  step: '02',
+                  title: 'Aplicação',
+                  description: 'O filme é aplicado diretamente na peça com temperatura e pressão controladas.',
+                  icon: Zap,
+                },
+                {
+                  step: '03',
+                  title: 'Hot Peel',
+                  description: 'O filme é removido imediatamente ainda quente, revelando sua estampa perfeita.',
+                  icon: Clock,
+                },
+              ].map((step, index) => (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 1.8 + index * 0.2 }}
+                  className="flex items-start space-x-4 p-6 bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl hover:border-gold-500/40 transition-all duration-300"
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gold-500/10 rounded-full flex items-center justify-center">
+                      <step.icon className="w-6 h-6 text-gold-500" />
+                    </div>
+                  </div>
+                  
+                  <div className="flex-grow">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="text-2xl font-bold gradient-text-gold">
+                        {step.step}
+                      </span>
+                      <h4 className="text-xl font-bold text-white">
+                        {step.title}
+                      </h4>
+                    </div>
+                    <p className="text-gray-400 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                  
+                  {index < 2 && (
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                      <ArrowRight className="w-5 h-5 text-gold-500 rotate-90" />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </motion.div>
       </div>

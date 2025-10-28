@@ -10,6 +10,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { SafeComponent } from '@/components/SafeComponent';
 import { WebpackErrorBoundary } from '@/components/WebpackErrorBoundary';
+import { VideoOptimizer } from '@/components/VideoOptimizer';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -105,6 +106,7 @@ export default function RootLayout({
               />
               <Analytics />
               <PerformanceOptimizer />
+              <VideoOptimizer />
               <script
                 dangerouslySetInnerHTML={{
                   __html: `

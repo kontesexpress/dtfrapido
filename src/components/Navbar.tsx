@@ -46,11 +46,9 @@ export function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   const navItems = [
-    { href: '#home', label: 'Início' },
     { href: '#sobre', label: 'Sobre DTF' },
-    { href: '#vantagens', label: 'Vantagens' },
+    { href: '#dtfuv', label: 'DTF UV' },
     { href: '#portfolio', label: 'Portfólio' },
-    { href: '#contato', label: 'Contato' },
   ];
 
   return (
@@ -67,7 +65,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link 
+            href="#home" 
+            onClick={closeMenu}
+            className="flex items-center space-x-3 group"
+          >
             <div className="relative">
               <img 
                 src="/images/logo-Kontes.png.webp" 
@@ -89,18 +91,25 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.href}
-                href={item.href}
+                onClick={() => {
+                  const element = document.getElementById(item.href.replace('#', ''));
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="text-white hover:text-gold-400 transition-colors duration-300 font-medium relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
-              </Link>
+              </button>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const element = document.getElementById('especificacoes');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-gradient-to-r from-gold-500 to-gold-600 text-dark-900 px-6 py-2 rounded-full font-semibold hover:from-gold-400 hover:to-gold-500 transition-all duration-300 shadow-lg hover:shadow-gold-500/25"
             >
               Orçamento Grátis
@@ -136,13 +145,16 @@ export function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block text-white hover:text-gold-400 transition-colors duration-300 font-medium py-4 px-4 rounded-lg hover:bg-gold-500/10 touch-manipulation"
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById(item.href.replace('#', ''));
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                      closeMenu();
+                    }}
+                    className="block text-white hover:text-gold-400 transition-colors duration-300 font-medium py-4 px-4 rounded-lg hover:bg-gold-500/10 touch-manipulation w-full text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </motion.div>
               ))}
               <motion.div
@@ -154,7 +166,11 @@ export function Navbar() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    const element = document.getElementById('especificacoes');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                    closeMenu();
+                  }}
                   className="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-dark-900 px-6 py-4 rounded-full font-semibold hover:from-gold-400 hover:to-gold-500 transition-all duration-300 shadow-lg touch-manipulation"
                 >
                   Orçamento Grátis

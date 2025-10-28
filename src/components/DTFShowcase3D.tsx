@@ -59,7 +59,7 @@ export function DTFShowcase3D() {
   return (
     <div 
       ref={containerRef}
-      className="relative w-full h-96 flex items-center justify-center overflow-hidden"
+      className="relative w-full h-full flex items-center justify-center overflow-hidden"
     >
       {/* Container principal */}
       <div className="relative w-full h-full flex items-center justify-center">

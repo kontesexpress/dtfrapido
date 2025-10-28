@@ -56,7 +56,7 @@ export function TShirt3D() {
       >
         {/* Corpo da camiseta */}
         <div 
-          className={`w-32 h-40 bg-gradient-to-b from-white to-gray-100 rounded-lg shadow-2xl transform transition-all duration-500 ${
+          className={`w-36 h-44 bg-gradient-to-b from-white to-gray-100 rounded-lg shadow-2xl transform transition-all duration-500 ${
             isHovered ? 'scale-110 rotate-2' : 'scale-100 rotate-0'
           }`}
           style={{
@@ -66,17 +66,17 @@ export function TShirt3D() {
           }}
         >
           {/* Gola */}
-          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full"></div>
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full"></div>
           
           {/* Mangas */}
-          <div className="absolute top-4 -left-2 w-6 h-16 bg-gradient-to-b from-white to-gray-100 rounded-full"></div>
-          <div className="absolute top-4 -right-2 w-6 h-16 bg-gradient-to-b from-white to-gray-100 rounded-full"></div>
+          <div className="absolute top-3 -left-1 w-5 h-16 bg-gradient-to-b from-white to-gray-100 rounded-full"></div>
+          <div className="absolute top-3 -right-1 w-5 h-16 bg-gradient-to-b from-white to-gray-100 rounded-full"></div>
           
           {/* Design impresso na camiseta */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-16">
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-14">
             {/* Logo/Design central */}
             <div className="w-full h-full bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
-              <div className="text-white font-bold text-sm">DTF</div>
+              <div className="text-white font-bold text-xs">DTF</div>
             </div>
             
             {/* Efeito de brilho no design */}
@@ -84,17 +84,17 @@ export function TShirt3D() {
           </div>
           
           {/* Detalhes de costura */}
-          <div className="absolute bottom-4 left-2 right-2 h-1 bg-gray-300 rounded-full"></div>
-          <div className="absolute top-12 left-2 right-2 h-0.5 bg-gray-300 rounded-full"></div>
+          <div className="absolute bottom-3 left-1 right-1 h-0.5 bg-gray-300 rounded-full"></div>
+          <div className="absolute top-12 left-1 right-1 h-0.5 bg-gray-300 rounded-full"></div>
         </div>
 
         {/* Efeito de partículas de tinta */}
         {isVisible && (
           <>
-            <div className="absolute top-16 left-8 w-1 h-1 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-            <div className="absolute top-20 left-12 w-1 h-1 bg-magenta-400 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></div>
-            <div className="absolute top-18 left-16 w-1 h-1 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.6s' }}></div>
-            <div className="absolute top-22 left-20 w-1 h-1 bg-black rounded-full animate-bounce" style={{ animationDelay: '0.9s' }}></div>
+            <div className="absolute top-12 left-6 w-1 h-1 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+            <div className="absolute top-16 left-10 w-1 h-1 bg-magenta-400 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></div>
+            <div className="absolute top-14 left-14 w-1 h-1 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.6s' }}></div>
+            <div className="absolute top-18 left-18 w-1 h-1 bg-black rounded-full animate-bounce" style={{ animationDelay: '0.9s' }}></div>
           </>
         )}
 
@@ -104,7 +104,7 @@ export function TShirt3D() {
         )}
 
         {/* Sombra da camiseta */}
-        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-28 h-4 bg-black/20 rounded-full blur-sm"></div>
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-28 h-3 bg-black/20 rounded-full blur-sm"></div>
       </div>
 
       {/* Efeito de luz ambiente */}
