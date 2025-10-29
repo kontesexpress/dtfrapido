@@ -169,19 +169,9 @@ export function GoogleReviewsSimple() {
         >
             <div className="bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-4 sm:p-6 lg:p-8 overflow-hidden">
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-              {/* WhatsApp Icon */}
-              <div className="flex-shrink-0 mx-auto sm:mx-0 relative">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg">
-                  <Image 
-                    src="/images/whatsapp-logo.webp" 
-                    alt="WhatsApp" 
-                    width={72}
-                    height={72}
-                    className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                  />
-                </div>
-                {/* Avatar overlapping */}
-                <div className="absolute -bottom-1 -right-1 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl border-2 border-dark-800 shadow-lg">
+              {/* Avatar */}
+              <div className="flex-shrink-0 mx-auto sm:mx-0">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl">
                   {reviews[currentReview]?.name?.charAt(0) || 'A'}
                 </div>
               </div>
@@ -216,9 +206,11 @@ export function GoogleReviewsSimple() {
                   <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 justify-center sm:justify-start">
                     {reviews[currentReview].photos.map((photo: string, index: number) => (
                       <div key={index} className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-700 rounded-lg overflow-hidden relative group">
-                        <img
+                        <Image
                           src={photo}
                           alt={`Foto ${index + 1} da avaliação`}
+                          width={80}
+                          height={80}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
@@ -233,7 +225,6 @@ export function GoogleReviewsSimple() {
                               `;
                             }
                           }}
-                          loading="lazy"
                         />
                       </div>
                     ))}

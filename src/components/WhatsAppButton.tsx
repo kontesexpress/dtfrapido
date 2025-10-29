@@ -35,8 +35,8 @@ export function WhatsAppButton() {
       <Image 
         src="/images/whatsapp-logo.webp" 
         alt="WhatsApp" 
-        width={24}
-        height={24}
+        width={42}
+        height={42}
         className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300"
       />
       <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-400 rounded-full animate-pulse" />
