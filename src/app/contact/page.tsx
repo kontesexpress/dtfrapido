@@ -3,7 +3,8 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { MessageSquare, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -27,7 +28,13 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Ícone WhatsApp */}
             <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto">
-              <MessageSquare className="w-12 h-12 text-white" />
+              <Image 
+                src="/images/whatsapp-logo.webp" 
+                alt="WhatsApp" 
+                width={48}
+                height={48}
+                className="w-12 h-12"
+              />
             </div>
 
             {/* Título */}
@@ -51,7 +58,13 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <MessageSquare className="w-6 h-6" />
+                <Image 
+                  src="/images/whatsapp-logo.webp" 
+                  alt="WhatsApp" 
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
                 <span>Conversar no WhatsApp</span>
                 <ArrowRight className="w-6 h-6" />
               </Link>

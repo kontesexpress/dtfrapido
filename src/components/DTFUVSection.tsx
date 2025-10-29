@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
-import Image from 'next/image';
+import { OptimizedImage } from './OptimizedImage';
 import { Sun, Zap, Shield, Star, Sparkles, Award, Circle, Square, Triangle, Palette } from 'lucide-react';
 
 export function DTFUVSection() {
@@ -128,13 +128,14 @@ export function DTFUVSection() {
             className="md:col-span-2 lg:col-span-1 lg:row-span-2 bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl overflow-hidden"
           >
             <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px]">
-              <Image
+              <OptimizedImage
                 src="/images/DtfUV.webp"
                 alt="DTF UV - Exemplo de aplicação com brilho"
-                width={1200}
-                height={800}
-                className="w-full h-full object-cover"
+                width={1920}
+                height={1280}
+                className="w-full h-full object-cover filter brightness-110 contrast-110 saturate-110"
                 priority
+                quality={95}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">

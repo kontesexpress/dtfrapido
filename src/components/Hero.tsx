@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, MessageSquare, Zap, Award } from 'lucide-react';
+import { ArrowRight, Star, Zap, Award } from 'lucide-react';
 import Image from 'next/image';
 import { ModernBackground } from './ModernBackground';
 
@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-900/50 to-dark-900 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 sm:pt-20 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,13 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
               className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:from-green-400 hover:to-green-500 transition-all duration-300 shadow-xl hover:shadow-green-500/25 flex items-center space-x-2 w-full sm:w-auto justify-center touch-manipulation"
             >
-              <MessageSquare className="h-5 w-5" />
+              <Image 
+                src="/images/whatsapp-logo.webp" 
+                alt="WhatsApp" 
+                width={20}
+                height={20}
+                className="h-5 w-5"
+              />
               <span>Enviar PDF no WhatsApp</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.a>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageSquare } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export function WhatsAppButton() {
@@ -32,7 +32,13 @@ export function WhatsAppButton() {
       animate={{ scale: 1 }}
       transition={{ delay: 1.5 }}
     >
-      <MessageSquare className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
+      <Image 
+        src="/images/whatsapp-logo.webp" 
+        alt="WhatsApp" 
+        width={24}
+        height={24}
+        className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300"
+      />
       <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-400 rounded-full animate-pulse" />
       
       {/* Tooltip */}
