@@ -164,7 +164,7 @@ export function WhatIsDTF() {
                 {
                   step: '03',
                   title: 'Hot Peel',
-                  description: 'O filme é removido imediatamente ainda quente, revelando sua estampa perfeita.',
+                  description: 'O filme é removido imediatamente ainda quente, agilizando a produção.',
                   icon: Clock,
                 },
               ].map((step, index) => (

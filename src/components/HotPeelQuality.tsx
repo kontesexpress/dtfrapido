@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
 import { VideoPlayer } from './VideoPlayer';
-import { Play, Zap, Award, CheckCircle } from 'lucide-react';
+import { Zap, Award, CheckCircle } from 'lucide-react';
 
 export function HotPeelQuality() {
   const [ref, inView] = useInViewSSR({
@@ -76,15 +76,8 @@ export function HotPeelQuality() {
                 autoPlay={true}
                 loop={true}
                 muted={true}
-                controls={true}
+                controls={false}
               />
-              
-              {/* Overlay com play button */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="bg-black/20 backdrop-blur-sm rounded-full p-4">
-                  <Play className="w-8 h-8 text-white" />
-                </div>
-              </div>
             </div>
             
             <div className="mt-4 text-center">

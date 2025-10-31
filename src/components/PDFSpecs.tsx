@@ -20,7 +20,7 @@ export function PDFSpecs() {
     {
       icon: CheckCircle,
       title: 'Resolução',
-      description: '300 DPI mínimo',
+      description: 'Recomendamos Vetorizado. Não nos responsabilizamos por arquivos em baixa resolução.',
       required: true,
     },
     {
@@ -44,7 +44,7 @@ export function PDFSpecs() {
     {
       icon: AlertCircle,
       title: 'Espelhado',
-      description: 'Não necessário - aplicamos',
+      description: 'Não aplicamos',
       required: false,
     },
   ];
@@ -106,7 +106,7 @@ export function PDFSpecs() {
                 <AlertCircle className="w-6 h-6 text-red-400" />
                 <h3 className="text-lg sm:text-xl font-bold text-red-300">Dimensão Obrigatória</h3>
               </div>
-              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">57cm × 100cm</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-2">57cm de largura. Mínimo 1 metro</div>
               <p className="text-sm text-red-200">Arquivos em outras dimensões não serão aceitos</p>
             </div>
           </motion.div>
@@ -194,7 +194,7 @@ export function PDFSpecs() {
                 PDF no Formato Correto?
               </h3>
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                Envie seu arquivo <span className="text-gold-300 font-bold">57cm × 100cm</span> e receba em até 24h 
+                Envie seu arquivo <span className="text-gold-300 font-bold">57cm de largura, mínimo 1 metro</span> e receba em até 24h 
                 com a qualidade Hot Peel que você precisa.
               </p>
 

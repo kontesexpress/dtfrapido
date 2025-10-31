@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
-import { OptimizedImage } from './OptimizedImage';
+import { VideoPlayer } from './VideoPlayer';
 import { Sun, Zap, Shield, Star, Sparkles, Award, Circle, Square, Triangle, Palette } from 'lucide-react';
 
 export function DTFUVSection() {
@@ -128,17 +128,17 @@ export function DTFUVSection() {
             className="md:col-span-2 lg:col-span-1 lg:row-span-2 bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl overflow-hidden"
           >
             <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px]">
-              <OptimizedImage
-                src="/images/DtfUV.webp"
-                alt="DTF UV - Exemplo de aplicação com brilho"
-                width={1920}
-                height={1280}
-                className="w-full h-full object-cover filter brightness-110 contrast-110 saturate-110"
-                priority
-                quality={95}
+              <VideoPlayer
+                src="/videos/DtfUV.mp4"
+                className="w-full h-full object-cover"
+                autoPlay={true}
+                loop={true}
+                muted={true}
+                controls={true}
+                lazy={true}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
                 <div className="bg-gold-500/20 backdrop-blur-sm rounded-lg p-4 border border-gold-500/30">
                   <h3 className="text-lg font-bold text-gold-300 mb-2">DTF UV Premium</h3>
                   <p className="text-sm text-gray-300">
