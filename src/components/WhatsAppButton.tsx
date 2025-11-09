@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export function WhatsAppButton() {
   const [isMounted, setIsMounted] = useState(false);
@@ -13,6 +14,9 @@ export function WhatsAppButton() {
 
   const handleWhatsAppClick = () => {
     if (typeof window !== 'undefined') {
+      // Rastrear conversão do Google Ads
+      trackWhatsAppClick();
+
       const message = encodeURIComponent(
         'Olá! Vim pelo site DTF Rápido e gostaria de solicitar um orçamento para impressão DTF.'
       );

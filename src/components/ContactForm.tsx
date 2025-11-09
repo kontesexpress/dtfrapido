@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Send, Upload, MessageCircle, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { trackContactForm } from '@/lib/analytics';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
@@ -82,6 +83,14 @@ export function ContactForm() {
       if (!response.ok) {
         throw new Error(result.error || 'Erro ao enviar formulário');
       }
+
+      // Calcular valor estimado para tracking
+      const quantity = parseFloat(data.quantity) || 0;
+      const estimatedValue = quantity * 60; // R$ 60,00 por metro
+      const transactionId = `form_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+      // Rastrear conversão do Google Ads
+      trackContactForm(estimatedValue, transactionId);
 
       toast.success('Orçamento enviado com sucesso! Você receberá uma confirmação por email.');
       reset();
