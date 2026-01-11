@@ -9,10 +9,10 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Modern Background */}
-            <div className="absolute inset-0 z-0">
-              <ModernBackground />
-            </div>
+      {/* Modern Background */}
+      <div className="absolute inset-0 z-0">
+        <ModernBackground />
+      </div>
 
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-900/50 to-dark-900 z-10" />
@@ -32,9 +32,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="inline-flex items-center space-x-3 bg-gold-500/10 border border-gold-500/20 rounded-full px-6 py-3 text-gold-400 text-sm font-medium"
           >
-            <Image 
-              src="/images/logo-Kontes.png.webp" 
-              alt="Kontes Express Logo" 
+            <Image
+              src="/images/logo-Kontes.png.webp"
+              alt="Kontes Express Logo"
               width={24}
               height={24}
               className="h-6 w-6 object-contain"
@@ -77,16 +77,16 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6 px-2"
           >
             <motion.a
-              href="https://wa.me/5511919009112?text=Olá! Tenho PDF pronto para impressão DTF. Quantidade: __ metros. Tipo: __"
+              href="https://wa.me/5511961885415?text=Olá! Tenho PDF pronto para impressão DTF. Quantidade: __ metros. Tipo: __"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(37, 211, 102, 0.4)' }}
               whileTap={{ scale: 0.95 }}
               className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:from-green-400 hover:to-green-500 transition-all duration-300 shadow-xl hover:shadow-green-500/25 flex items-center space-x-2 w-full sm:w-auto justify-center touch-manipulation"
             >
-              <Image 
-                src="/images/whatsapp-logo.webp" 
-                alt="WhatsApp" 
+              <Image
+                src="/images/whatsapp-logo.webp"
+                alt="WhatsApp"
                 width={20}
                 height={20}
                 className="h-5 w-5"

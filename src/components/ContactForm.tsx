@@ -44,7 +44,7 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
+
     try {
       // Criar FormData para envio
       const formData = new FormData();
@@ -55,7 +55,7 @@ export function ContactForm() {
       formData.append('projectType', data.projectType);
       formData.append('quantity', data.quantity);
       formData.append('message', data.message);
-      
+
       // Adicionar arquivo se existir
       if (data.file && data.file.length > 0) {
         formData.append('file', data.file[0]);
@@ -106,7 +106,7 @@ export function ContactForm() {
     {
       icon: MessageSquare,
       title: 'WhatsApp',
-      info: '+55 (11) 91900-9112',
+      info: '+55 (11) 96188-5415',
       description: 'Segunda à sexta: 8h às 17h | Sábado: 8h às 12h',
       isWhatsApp: true,
     },
@@ -143,14 +143,14 @@ export function ContactForm() {
             <span className="text-white">Entre em </span>
             <span className="gradient-text-gold">Contato</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
-            Pronto para transformar suas ideias em estampas incríveis? 
+            Pronto para transformar suas ideias em estampas incríveis?
             Entre em contato conosco e solicite seu orçamento gratuito.
           </motion.p>
         </motion.div>
@@ -168,7 +168,7 @@ export function ContactForm() {
                 Fale Conosco
               </h3>
               <p className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8">
-                Nossa equipe está pronta para ajudar você a criar estampas 
+                Nossa equipe está pronta para ajudar você a criar estampas
                 incríveis. Entre em contato pelos canais abaixo:
               </p>
             </div>
@@ -180,29 +180,25 @@ export function ContactForm() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
-                  className={`flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-sm rounded-xl transition-all duration-300 ${
-                    info.isWhatsApp 
-                      ? 'bg-green-500/10 border-2 border-green-500/40 hover:border-green-500/60 hover:bg-green-500/20' 
+                  className={`flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-sm rounded-xl transition-all duration-300 ${info.isWhatsApp
+                      ? 'bg-green-500/10 border-2 border-green-500/40 hover:border-green-500/60 hover:bg-green-500/20'
                       : 'bg-dark-800/50 border border-gold-500/20 hover:border-gold-500/40'
-                  }`}
+                    }`}
                 >
-                  <div className={`p-2 sm:p-3 rounded-full ${
-                    info.isWhatsApp 
-                      ? 'bg-green-500/20' 
+                  <div className={`p-2 sm:p-3 rounded-full ${info.isWhatsApp
+                      ? 'bg-green-500/20'
                       : 'bg-gold-500/10'
-                  }`}>
-                    <info.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      info.isWhatsApp 
-                        ? 'text-green-500' 
+                    }`}>
+                    <info.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${info.isWhatsApp
+                        ? 'text-green-500'
                         : 'text-gold-500'
-                    }`} />
+                      }`} />
                   </div>
                   <div>
-                    <h4 className={`text-base sm:text-lg font-bold mb-1 ${
-                      info.isWhatsApp 
-                        ? 'text-green-400' 
+                    <h4 className={`text-base sm:text-lg font-bold mb-1 ${info.isWhatsApp
+                        ? 'text-green-400'
                         : 'text-white'
-                    }`}>
+                      }`}>
                       {info.title}
                       {info.isWhatsApp && (
                         <span className="ml-2 text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
@@ -210,18 +206,16 @@ export function ContactForm() {
                         </span>
                       )}
                     </h4>
-                    <p className={`text-sm sm:text-base font-medium mb-1 ${
-                      info.isWhatsApp 
-                        ? 'text-green-300' 
+                    <p className={`text-sm sm:text-base font-medium mb-1 ${info.isWhatsApp
+                        ? 'text-green-300'
                         : 'text-gold-400'
-                    }`}>
+                      }`}>
                       {info.info}
                     </p>
-                    <p className={`text-xs sm:text-sm ${
-                      info.isWhatsApp 
-                        ? 'text-green-300/80' 
+                    <p className={`text-xs sm:text-sm ${info.isWhatsApp
+                        ? 'text-green-300/80'
                         : 'text-gray-400'
-                    }`}>
+                      }`}>
                       {info.description}
                     </p>
                   </div>
@@ -367,8 +361,8 @@ export function ContactForm() {
                     className="hidden"
                     id="file-upload"
                   />
-                  <label 
-                    htmlFor="file-upload" 
+                  <label
+                    htmlFor="file-upload"
                     className="inline-block mt-3 px-4 py-2 bg-gold-500/10 text-gold-400 rounded-lg cursor-pointer hover:bg-gold-500/20 transition-colors duration-300"
                   >
                     Selecionar Arquivo

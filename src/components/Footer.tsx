@@ -24,14 +24,14 @@ export function Footer() {
 
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/kontesexpress/', label: 'Instagram' },
-    { 
+    {
       icon: () => (
         <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
         </svg>
-      ), 
-      href: 'https://www.tiktok.com/@kontesexpress', 
-      label: 'TikTok' 
+      ),
+      href: 'https://www.tiktok.com/@kontesexpress',
+      label: 'TikTok'
     },
   ];
 
@@ -51,9 +51,9 @@ export function Footer() {
               >
                 <Link href="/" className="flex items-center space-x-3 group">
                   <div className="relative">
-                    <img 
-                      src="/images/logo-Kontes.png.webp" 
-                      alt="Kontes Express Logo" 
+                    <img
+                      src="/images/logo-Kontes.png.webp"
+                      alt="Kontes Express Logo"
                       className="h-10 w-10 sm:h-12 sm:w-12 object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gold-500/20 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all duration-300" />
@@ -75,8 +75,8 @@ export function Footer() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed"
               >
-                Impressão DTF Premium com brilho, cor e precisão impecável. 
-                Transformamos suas ideias em estampas de alta qualidade com 
+                Impressão DTF Premium com brilho, cor e precisão impecável.
+                Transformamos suas ideias em estampas de alta qualidade com
                 tecnologia de ponta e atendimento especializado.
               </motion.p>
 
@@ -89,7 +89,7 @@ export function Footer() {
               >
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500" />
-                  <span className="text-sm sm:text-base">+55 (11) 91900-9112</span>
+                  <span className="text-sm sm:text-base">+55 (11) 96188-5415</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500" />
@@ -175,9 +175,9 @@ export function Footer() {
               <br />
               <span className="text-xs">
                 Desenvolvido por{' '}
-                <a 
-                  href="https://www.evergreenmkt.com.br/" 
-                  target="_blank" 
+                <a
+                  href="https://www.evergreenmkt.com.br/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-gold-400 hover:text-gold-300 transition-colors duration-300 underline"
                 >

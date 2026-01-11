@@ -28,9 +28,9 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Ícone WhatsApp */}
             <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto">
-              <Image 
-                src="/images/whatsapp-logo.webp" 
-                alt="WhatsApp" 
+              <Image
+                src="/images/whatsapp-logo.webp"
+                alt="WhatsApp"
                 width={48}
                 height={48}
                 className="w-12 h-12"
@@ -45,22 +45,22 @@ export default function ContactPage() {
 
             {/* Descrição */}
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Para solicitar seu orçamento gratuito de impressão DTF, 
-              entre em contato conosco via WhatsApp. Atendimento especializado 
+              Para solicitar seu orçamento gratuito de impressão DTF,
+              entre em contato conosco via WhatsApp. Atendimento especializado
               e suporte técnico disponível.
             </p>
 
             {/* Botão WhatsApp */}
             <div className="pt-8">
               <Link
-                href="https://wa.me/5511919009112?text=Olá! Gostaria de solicitar um orçamento para impressão DTF."
+                href="https://wa.me/5511961885415?text=Olá! Gostaria de solicitar um orçamento para impressão DTF."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <Image 
-                  src="/images/whatsapp-logo.webp" 
-                  alt="WhatsApp" 
+                <Image
+                  src="/images/whatsapp-logo.webp"
+                  alt="WhatsApp"
                   width={24}
                   height={24}
                   className="w-6 h-6"

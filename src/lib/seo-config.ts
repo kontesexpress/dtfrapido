@@ -14,7 +14,7 @@ export const seoConfig = {
   // Business Information
   business: {
     name: 'Kontes Express',
-    phone: '+55-11-91900-9112',
+    phone: '+55-11-96188-5415',
     email: 'kontesexpress@gmail.com',
     address: {
       street: 'R. Bresser, 601 - Brás',
@@ -195,7 +195,7 @@ export const seoConfig = {
       id: 'your-gmb-id',
       name: 'DTF Rápido by Kontes Express',
       address: 'São Paulo, SP, Brasil',
-      phone: '+55-11-91900-9112',
+      phone: '+55-11-96188-5415',
       website: 'https://dtfrapido.com.br',
       categories: ['Printing Service', 'Custom Apparel', 'Textile Printing'],
     },
@@ -224,7 +224,7 @@ export function generateOgImageUrl(title: string): string {
   return `${seoConfig.site.url}/api/og?${params.toString()}`;
 }
 
-export function generateBreadcrumbSchema(items: Array<{name: string, url: string}>) {
+export function generateBreadcrumbSchema(items: Array<{ name: string, url: string }>) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -237,7 +237,7 @@ export function generateBreadcrumbSchema(items: Array<{name: string, url: string
   };
 }
 
-export function generateFAQSchema(faqs: Array<{question: string, answer: string}>) {
+export function generateFAQSchema(faqs: Array<{ question: string, answer: string }>) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

@@ -12,7 +12,7 @@ export const baseSchema = {
   url: 'https://dtfrapido.com.br',
   logo: 'https://dtfrapido.com.br/images/logo.png',
   image: 'https://dtfrapido.com.br/images/og-image.jpg',
-  telephone: '+55-11-91900-9112',
+  telephone: '+55-11-96188-5415',
   email: 'kontesexpress@gmail.com',
   address: {
     '@type': 'PostalAddress',
@@ -203,7 +203,7 @@ export const websiteSchema = {
   },
 };
 
-export const breadcrumbSchema = (items: Array<{name: string, url: string}>) => ({
+export const breadcrumbSchema = (items: Array<{ name: string, url: string }>) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: items.map((item, index) => ({
@@ -270,7 +270,7 @@ export const serviceSchema = (service: {
   }),
 });
 
-export const faqSchema = (faqs: Array<{question: string, answer: string}>) => ({
+export const faqSchema = (faqs: Array<{ question: string, answer: string }>) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: faqs.map(faq => ({

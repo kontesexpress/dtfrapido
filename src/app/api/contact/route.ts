@@ -5,15 +5,15 @@ const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key-for-build');
 
 export async function POST(request: NextRequest) {
   console.log('📧 Iniciando processamento do formulário de contato');
-  
+
   try {
     // Verificar se a API key está configurada
     if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dummy-key-for-build') {
       console.error('❌ API key do Resend não configurada');
       return NextResponse.json(
-        { 
+        {
           success: false,
-          error: 'API key do Resend não configurada. Configure a variável RESEND_API_KEY.' 
+          error: 'API key do Resend não configurada. Configure a variável RESEND_API_KEY.'
         },
         { status: 500 }
       );
@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 
     const formData = await request.formData();
     console.log('📋 FormData recebido com sucesso');
-    
+
     // Extrair dados do formulário
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
@@ -32,13 +32,13 @@ export async function POST(request: NextRequest) {
     const message = formData.get('message') as string;
     const file = formData.get('file') as File;
 
-    console.log('📝 Dados extraídos:', { 
-      name, 
-      email, 
-      phone, 
-      company, 
-      projectType, 
-      quantity, 
+    console.log('📝 Dados extraídos:', {
+      name,
+      email,
+      phone,
+      company,
+      projectType,
+      quantity,
       messageLength: message?.length,
       fileName: file?.name,
       fileSize: file?.size
@@ -47,9 +47,9 @@ export async function POST(request: NextRequest) {
     // Validar dados obrigatórios
     if (!name || !email || !phone || !projectType || !quantity || !message || !file) {
       return NextResponse.json(
-        { 
+        {
           success: false,
-          error: 'Todos os campos obrigatórios devem ser preenchidos' 
+          error: 'Todos os campos obrigatórios devem ser preenchidos'
         },
         { status: 400 }
       );
@@ -59,9 +59,9 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { 
+        {
           success: false,
-          error: 'Email inválido' 
+          error: 'Email inválido'
         },
         { status: 400 }
       );
@@ -70,9 +70,9 @@ export async function POST(request: NextRequest) {
     // Validar tamanho do arquivo (máximo 10MB)
     if (file.size > 10 * 1024 * 1024) {
       return NextResponse.json(
-        { 
+        {
           success: false,
-          error: 'Arquivo muito grande. Máximo 10MB permitido.' 
+          error: 'Arquivo muito grande. Máximo 10MB permitido.'
         },
         { status: 400 }
       );
@@ -135,7 +135,7 @@ export async function POST(request: NextRequest) {
               ⚡ Resposta em até 24 horas
             </p>
             <p style="margin: 5px 0 0 0; color: #1a1a1a; font-size: 14px;">
-              WhatsApp: (11) 91900-9112 | Email: kontesexpress@gmail.com
+              WhatsApp: (11) 96188-5415 | Email: kontesexpress@gmail.com
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export async function POST(request: NextRequest) {
 
           <div style="text-align: center; margin-top: 25px;">
             <p style="color: #333; font-weight: bold; margin-bottom: 15px;">📞 Precisa de algo urgente?</p>
-            <a href="https://wa.me/5511919009112" style="display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold;">
+            <a href="https://wa.me/5511961885415" style="display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold;">
               💬 Falar no WhatsApp
             </a>
           </div>
@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
             <p style="margin: 0; color: #666; font-size: 14px;">
               <strong>Kontes Express</strong><br>
               📍 R. Bresser, 601 - Brás, São Paulo - SP<br>
-              📧 kontesexpress@gmail.com | 📱 (11) 91900-9112
+              📧 kontesexpress@gmail.com | 📱 (11) 96188-5415
             </p>
           </div>
         </div>
@@ -225,22 +225,22 @@ export async function POST(request: NextRequest) {
     }
 
     console.log('✅ Formulário processado com sucesso');
-    
+
     return NextResponse.json(
-      { 
-        success: true, 
+      {
+        success: true,
         message: 'Orçamento enviado com sucesso!',
-        emailId: emailToCompany?.data?.id 
+        emailId: emailToCompany?.data?.id
       },
       { status: 200 }
     );
 
   } catch (error) {
     console.error('Erro ao processar formulário:', error);
-    
+
     // Retornar resposta JSON válida mesmo em caso de erro
     return NextResponse.json(
-      { 
+      {
         success: false,
         error: 'Erro interno do servidor. Tente novamente.',
         details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : String(error)) : undefined

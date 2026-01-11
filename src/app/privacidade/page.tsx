@@ -11,7 +11,7 @@ export default function PrivacidadePage() {
       <div className="bg-dark-900/95 backdrop-blur-md border-b border-gold-500/20 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center space-x-4">
-            <Link 
+            <Link
               href="/"
               className="flex items-center space-x-2 text-gold-400 hover:text-gold-300 transition-colors duration-300"
             >
@@ -41,11 +41,11 @@ export default function PrivacidadePage() {
               <Shield className="h-6 w-6 text-gold-500" />
               <span className="text-gold-400 font-semibold">Proteção de Dados</span>
             </motion.div>
-            
+
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Política de Privacidade
             </h1>
-            
+
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
@@ -69,9 +69,9 @@ export default function PrivacidadePage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">1. Introdução</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  A Kontes Express está comprometida com a proteção da privacidade e dos dados 
-                  pessoais de nossos clientes. Esta Política de Privacidade descreve como 
-                  coletamos, usamos, armazenamos e protegemos suas informações pessoais, 
+                  A Kontes Express está comprometida com a proteção da privacidade e dos dados
+                  pessoais de nossos clientes. Esta Política de Privacidade descreve como
+                  coletamos, usamos, armazenamos e protegemos suas informações pessoais,
                   em conformidade com a Lei Geral de Proteção de Dados (LGPD).
                 </p>
               </section>
@@ -131,8 +131,8 @@ export default function PrivacidadePage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">6. Segurança dos Dados</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Implementamos medidas de segurança técnicas e organizacionais para proteger 
-                  seus dados pessoais contra acesso não autorizado, alteração, divulgação ou 
+                  Implementamos medidas de segurança técnicas e organizacionais para proteger
+                  seus dados pessoais contra acesso não autorizado, alteração, divulgação ou
                   destruição, incluindo:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
@@ -160,8 +160,8 @@ export default function PrivacidadePage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">8. Retenção de Dados</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir 
-                  as finalidades descritas nesta política ou conforme exigido por lei. 
+                  Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir
+                  as finalidades descritas nesta política ou conforme exigido por lei.
                   Após esse período, os dados são excluídos de forma segura.
                 </p>
               </section>
@@ -169,8 +169,8 @@ export default function PrivacidadePage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">9. Cookies</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Utilizamos cookies para melhorar sua experiência em nosso site. 
-                  Você pode gerenciar suas preferências de cookies através das 
+                  Utilizamos cookies para melhorar sua experiência em nosso site.
+                  Você pode gerenciar suas preferências de cookies através das
                   configurações do seu navegador.
                 </p>
               </section>
@@ -183,8 +183,8 @@ export default function PrivacidadePage() {
                 <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                   <p className="text-gold-300 font-semibold mb-2">Encarregado de Dados (DPO)</p>
                   <p className="text-gray-300 text-sm">
-                    📧 Email: privacidade@kontesexpress.com<br/>
-                    📱 WhatsApp: +55 (11) 91900-9112<br/>
+                    📧 Email: privacidade@kontesexpress.com<br />
+                    📱 WhatsApp: +55 (11) 96188-5415<br />
                     📍 Endereço: R. Bresser, 601 - Brás, São Paulo - SP
                   </p>
                 </div>

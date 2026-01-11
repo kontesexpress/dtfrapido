@@ -11,7 +11,7 @@ export default function LGPDPage() {
       <div className="bg-dark-900/95 backdrop-blur-md border-b border-gold-500/20 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center space-x-4">
-            <Link 
+            <Link
               href="/"
               className="flex items-center space-x-2 text-gold-400 hover:text-gold-300 transition-colors duration-300"
             >
@@ -41,11 +41,11 @@ export default function LGPDPage() {
               <Scale className="h-6 w-6 text-gold-500" />
               <span className="text-gold-400 font-semibold">Conformidade LGPD</span>
             </motion.div>
-            
+
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Lei Geral de Proteção de Dados
             </h1>
-            
+
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
@@ -69,9 +69,9 @@ export default function LGPDPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">1. Sobre a LGPD</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  A Lei Geral de Proteção de Dados (Lei 13.709/2018) é a legislação brasileira 
-                  que regula o tratamento de dados pessoais. A Kontes Express está totalmente 
-                  em conformidade com a LGPD, garantindo a proteção e privacidade dos dados 
+                  A Lei Geral de Proteção de Dados (Lei 13.709/2018) é a legislação brasileira
+                  que regula o tratamento de dados pessoais. A Kontes Express está totalmente
+                  em conformidade com a LGPD, garantindo a proteção e privacidade dos dados
                   de nossos clientes e usuários.
                 </p>
               </section>
@@ -81,7 +81,7 @@ export default function LGPDPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Seguimos rigorosamente os princípios estabelecidos pela LGPD:
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-gold-400 mb-3">🎯 Finalidade</h3>
@@ -118,12 +118,12 @@ export default function LGPDPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Você, como titular de dados pessoais, possui os seguintes direitos:
                 </p>
-                
+
                 <div className="space-y-4">
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">🔍 Direito de Acesso</h3>
                     <p className="text-gray-300 text-sm">
-                      Solicitar informações sobre o tratamento de seus dados pessoais, 
+                      Solicitar informações sobre o tratamento de seus dados pessoais,
                       incluindo finalidade, duração, responsáveis e compartilhamento.
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export default function LGPDPage() {
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">✏️ Direito de Retificação</h3>
                     <p className="text-gray-300 text-sm">
-                      Corrigir dados incompletos, inexatos ou desatualizados, 
+                      Corrigir dados incompletos, inexatos ou desatualizados,
                       garantindo a veracidade das informações.
                     </p>
                   </div>
@@ -139,7 +139,7 @@ export default function LGPDPage() {
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">🗑️ Direito de Exclusão</h3>
                     <p className="text-gray-300 text-sm">
-                      Solicitar a eliminação de dados desnecessários, excessivos 
+                      Solicitar a eliminação de dados desnecessários, excessivos
                       ou tratados em desconformidade com a LGPD.
                     </p>
                   </div>
@@ -147,7 +147,7 @@ export default function LGPDPage() {
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">📤 Direito de Portabilidade</h3>
                     <p className="text-gray-300 text-sm">
-                      Solicitar a portabilidade de seus dados para outro fornecedor 
+                      Solicitar a portabilidade de seus dados para outro fornecedor
                       de serviços, quando tecnicamente viável.
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export default function LGPDPage() {
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">🚫 Direito de Oposição</h3>
                     <p className="text-gray-300 text-sm">
-                      Opor-se ao tratamento de dados pessoais em casos de 
+                      Opor-se ao tratamento de dados pessoais em casos de
                       descumprimento da LGPD ou para finalidades diferentes.
                     </p>
                   </div>
@@ -167,7 +167,7 @@ export default function LGPDPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   O tratamento de dados pessoais pela Kontes Express é baseado em:
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-gold-400 mb-3">✅ Consentimento</h3>
@@ -202,10 +202,10 @@ export default function LGPDPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">5. Encarregado de Dados (DPO)</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Nomeamos um Encarregado de Proteção de Dados (DPO) para garantir 
+                  Nomeamos um Encarregado de Proteção de Dados (DPO) para garantir
                   o cumprimento da LGPD e atender às solicitações dos titulares:
                 </p>
-                
+
                 <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                   <h3 className="text-gold-300 font-bold mb-4">👤 Encarregado de Dados (DPO)</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -214,7 +214,7 @@ export default function LGPDPage() {
                         <strong>📧 Email:</strong> privacidade@kontesexpress.com
                       </p>
                       <p className="text-gray-300 text-sm mb-2">
-                        <strong>📱 WhatsApp:</strong> +55 (11) 91900-9112
+                        <strong>📱 WhatsApp:</strong> +55 (11) 96188-5415
                       </p>
                       <p className="text-gray-300 text-sm">
                         <strong>📍 Endereço:</strong> R. Bresser, 601 - Brás, São Paulo - SP
@@ -240,7 +240,7 @@ export default function LGPDPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Implementamos medidas técnicas e organizacionais para proteger seus dados:
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="bg-dark-700/50 rounded-xl p-4">
@@ -249,7 +249,7 @@ export default function LGPDPage() {
                         Dados sensíveis são criptografados em trânsito e em repouso.
                       </p>
                     </div>
-                    
+
                     <div className="bg-dark-700/50 rounded-xl p-4">
                       <h3 className="text-lg font-bold text-white mb-2">🛡️ Controle de Acesso</h3>
                       <p className="text-gray-300 text-sm">
@@ -257,7 +257,7 @@ export default function LGPDPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-dark-700/50 rounded-xl p-4">
                       <h3 className="text-lg font-bold text-white mb-2">📊 Monitoramento</h3>
@@ -265,7 +265,7 @@ export default function LGPDPage() {
                         Monitoramento 24/7 de tentativas de acesso não autorizado.
                       </p>
                     </div>
-                    
+
                     <div className="bg-dark-700/50 rounded-xl p-4">
                       <h3 className="text-lg font-bold text-white mb-2">💾 Backup Seguro</h3>
                       <p className="text-gray-300 text-sm">
@@ -281,7 +281,7 @@ export default function LGPDPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Para exercer seus direitos como titular de dados pessoais:
                 </p>
-                
+
                 <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                   <h3 className="text-gold-300 font-bold mb-4">📋 Processo de Solicitação</h3>
                   <ol className="list-decimal list-inside text-gray-300 space-y-2">
@@ -297,7 +297,7 @@ export default function LGPDPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">8. Sanções e Penalidades</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  A Kontes Express está ciente das sanções previstas na LGPD e se compromete 
+                  A Kontes Express está ciente das sanções previstas na LGPD e se compromete
                   a cumprir rigorosamente todas as obrigações legais, evitando:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">

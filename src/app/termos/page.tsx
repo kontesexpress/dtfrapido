@@ -11,7 +11,7 @@ export default function TermosPage() {
       <div className="bg-dark-900/95 backdrop-blur-md border-b border-gold-500/20 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center space-x-4">
-            <Link 
+            <Link
               href="/"
               className="flex items-center space-x-2 text-gold-400 hover:text-gold-300 transition-colors duration-300"
             >
@@ -41,11 +41,11 @@ export default function TermosPage() {
               <FileText className="h-6 w-6 text-gold-500" />
               <span className="text-gold-400 font-semibold">Documento Legal</span>
             </motion.div>
-            
+
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Termos de Uso
             </h1>
-            
+
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
@@ -69,8 +69,8 @@ export default function TermosPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">1. Aceitação dos Termos</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Ao acessar e utilizar os serviços da Kontes Express, você concorda em cumprir 
-                  e estar vinculado aos seguintes termos e condições de uso. Se você não concordar 
+                  Ao acessar e utilizar os serviços da Kontes Express, você concorda em cumprir
+                  e estar vinculado aos seguintes termos e condições de uso. Se você não concordar
                   com qualquer parte destes termos, não deve utilizar nossos serviços.
                 </p>
               </section>
@@ -78,7 +78,7 @@ export default function TermosPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">2. Descrição dos Serviços</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  A Kontes Express oferece serviços de impressão DTF (Direct to Film) para 
+                  A Kontes Express oferece serviços de impressão DTF (Direct to Film) para
                   personalização de produtos têxteis, incluindo:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
@@ -106,8 +106,8 @@ export default function TermosPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">4. Propriedade Intelectual</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Todos os direitos de propriedade intelectual relacionados aos nossos serviços, 
-                  incluindo mas não limitado a designs, processos, tecnologias e materiais, 
+                  Todos os direitos de propriedade intelectual relacionados aos nossos serviços,
+                  incluindo mas não limitado a designs, processos, tecnologias e materiais,
                   pertencem exclusivamente à Kontes Express.
                 </p>
               </section>
@@ -128,8 +128,8 @@ export default function TermosPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">6. Modificações dos Termos</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Reservamo-nos o direito de modificar estes termos a qualquer momento. 
-                  As alterações entrarão em vigor imediatamente após sua publicação no site. 
+                  Reservamo-nos o direito de modificar estes termos a qualquer momento.
+                  As alterações entrarão em vigor imediatamente após sua publicação no site.
                   É responsabilidade do usuário verificar periodicamente os termos atualizados.
                 </p>
               </section>
@@ -142,8 +142,8 @@ export default function TermosPage() {
                 <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                   <p className="text-gold-300 font-semibold mb-2">Kontes Express</p>
                   <p className="text-gray-300 text-sm">
-                    📧 Email: kontesexpress@gmail.com<br/>
-                    📱 WhatsApp: +55 (11) 91900-9112<br/>
+                    📧 Email: kontesexpress@gmail.com<br />
+                    📱 WhatsApp: +55 (11) 96188-5415<br />
                     📍 Endereço: R. Bresser, 601 - Brás, São Paulo - SP
                   </p>
                 </div>

@@ -18,7 +18,7 @@ const knowledgeBase = {
   price: {
     keywords: ['preço', 'valor', 'custo', 'quanto custa', 'orçamento', 'tabela de preços'],
     responses: [
-      '💰 Nosso preço é de R$ 60,00 por metro de DTF. Caso tenha projetos muito volumosos recomendo entrar em contato com nossos, Nossa equipe de especialistas está disponível no WhatsApp para te ajudar: https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.',
+      '💰 Nosso preço é de R$ 60,00 por metro de DTF. Caso tenha projetos muito volumosos recomendo entrar em contato com nossos, Nossa equipe de especialistas está disponível no WhatsApp para te ajudar: https://wa.me/5511961885415?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.',
     ]
   },
   deadline: {
@@ -56,21 +56,21 @@ const knowledgeBase = {
   contact: {
     keywords: ['contato', 'telefone', 'whatsapp', 'endereço', 'localização'],
     responses: [
-      '📞 Nossos contatos:\n• WhatsApp: (11) 91900-9112\n• Email: contato@kontesexpress.com\n• Endereço: R. Bresser, 601 - Brás, SP\n\n',
+      '📞 Nossos contatos:\n• WhatsApp: (11) 96188-5415\n• Email: contato@kontesexpress.com\n• Endereço: R. Bresser, 601 - Brás, SP\n\n',
     ]
   },
   whatsapp: {
     keywords: ['falar com alguém', 'atendimento', 'pessoa', 'humano', 'não entendi', 'não consegui', 'ajuda'],
     responses: [
-      '💬 Perfeito! Para falar diretamente com nossa equipe especializada, acesse nosso WhatsApp:\n\n📱 **WhatsApp Kontes Express**\n🔗 https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\n Nossa equipe está pronta para te atender com informações detalhadas sobre seu projeto!',
-      '🎯 Nossa equipe de especialistas está disponível no WhatsApp para te ajudar:\n\n📱 **Contato Direto**\n🔗 https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\n Lá você pode enviar fotos, arquivos e receber um atendimento personalizado!'
+      '💬 Perfeito! Para falar diretamente com nossa equipe especializada, acesse nosso WhatsApp:\n\n📱 **WhatsApp Kontes Express**\n🔗 https://wa.me/5511961885415?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\n Nossa equipe está pronta para te atender com informações detalhadas sobre seu projeto!',
+      '🎯 Nossa equipe de especialistas está disponível no WhatsApp para te ajudar:\n\n📱 **Contato Direto**\n🔗 https://wa.me/5511961885415?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\n Lá você pode enviar fotos, arquivos e receber um atendimento personalizado!'
     ]
   },
   default: {
     responses: [
       '🤔 Entendi sua pergunta! Para te dar a melhor resposta, me conte mais detalhes sobre:\n• Tipo de produto que você quer\n• Quantidade aproximada\n• Prazo desejado\n\nAssim posso te ajudar de forma mais precisa!',
       '💡 Posso te ajudar com informações sobre:\n• Preços e orçamentos\n• Prazos de produção\n• Tipos de materiais\n• Tecnologia DTF\n• Processo de pedido\n\nO que você gostaria de saber?',
-      '🎯 Não consegui entender completamente sua pergunta. Para um atendimento mais personalizado, nossa equipe está disponível no WhatsApp:\n\n📱 **WhatsApp Kontes Express**\n🔗 https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\nLá você pode enviar fotos e receber orientação detalhada!'
+      '🎯 Não consegui entender completamente sua pergunta. Para um atendimento mais personalizado, nossa equipe está disponível no WhatsApp:\n\n📱 **WhatsApp Kontes Express**\n🔗 https://wa.me/5511961885415?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF.\n\nLá você pode enviar fotos e receber orientação detalhada!'
     ]
   }
 };
@@ -91,17 +91,17 @@ export function AIChat() {
   // Função para encontrar a melhor resposta baseada nas palavras-chave
   const findBestResponse = (userMessage: string) => {
     const message = userMessage.toLowerCase();
-    
+
     // Verificar cada categoria de conhecimento
     for (const [category, data] of Object.entries(knowledgeBase)) {
       if (category === 'default') continue;
-      
+
       // Verificar se a categoria tem keywords
       if ('keywords' in data) {
-        const hasKeyword = data.keywords.some((keyword: string) => 
+        const hasKeyword = data.keywords.some((keyword: string) =>
           message.includes(keyword.toLowerCase())
         );
-        
+
         if (hasKeyword) {
           // Retornar resposta aleatória da categoria
           const randomResponse = data.responses[Math.floor(Math.random() * data.responses.length)];
@@ -109,7 +109,7 @@ export function AIChat() {
         }
       }
     }
-    
+
     // Se não encontrou categoria específica, usar resposta padrão
     const defaultResponses = knowledgeBase.default.responses;
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
@@ -221,7 +221,7 @@ export function AIChat() {
                           };
                           setMessages(prev => [...prev, userMessage]);
                           setIsTyping(true);
-                          
+
                           // Gerar resposta inteligente
                           setTimeout(() => {
                             const botResponse = {
@@ -254,25 +254,22 @@ export function AIChat() {
                   transition={{ duration: 0.3 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`flex items-start space-x-2 max-w-[80%] ${
-                    message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''
-                  }`}>
-                    <div className={`p-2 rounded-full ${
-                      message.type === 'user' 
-                        ? 'bg-gold-500 text-dark-900' 
-                        : 'bg-gold-500/10 text-gold-500'
+                  <div className={`flex items-start space-x-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''
                     }`}>
+                    <div className={`p-2 rounded-full ${message.type === 'user'
+                        ? 'bg-gold-500 text-dark-900'
+                        : 'bg-gold-500/10 text-gold-500'
+                      }`}>
                       {message.type === 'user' ? (
                         <User className="h-4 w-4" />
                       ) : (
                         <Bot className="h-4 w-4" />
                       )}
                     </div>
-                    <div className={`p-3 rounded-2xl ${
-                      message.type === 'user'
+                    <div className={`p-3 rounded-2xl ${message.type === 'user'
                         ? 'bg-gold-500 text-dark-900'
                         : 'bg-dark-700 text-white'
-                    }`}>
+                      }`}>
                       <div className="text-sm whitespace-pre-line">
                         {message.text.split('\n').map((line, index) => {
                           // Verificar se a linha contém um link do WhatsApp
@@ -282,7 +279,7 @@ export function AIChat() {
                               const url = urlMatch[0];
                               const beforeUrl = line.substring(0, line.indexOf(url));
                               const afterUrl = line.substring(line.indexOf(url) + url.length);
-                              
+
                               return (
                                 <div key={index}>
                                   {beforeUrl}
@@ -302,12 +299,11 @@ export function AIChat() {
                           return <div key={index}>{line}</div>;
                         })}
                       </div>
-                      <p className={`text-xs mt-1 ${
-                        message.type === 'user' ? 'text-dark-700/70' : 'text-gray-400'
-                      }`}>
-                        {message.timestamp.toLocaleTimeString('pt-BR', { 
-                          hour: '2-digit', 
-                          minute: '2-digit' 
+                      <p className={`text-xs mt-1 ${message.type === 'user' ? 'text-dark-700/70' : 'text-gray-400'
+                        }`}>
+                        {message.timestamp.toLocaleTimeString('pt-BR', {
+                          hour: '2-digit',
+                          minute: '2-digit'
                         })}
                       </p>
                     </div>
@@ -358,17 +354,17 @@ export function AIChat() {
                   <Send className="h-4 w-4" />
                 </motion.button>
               </div>
-              
+
               {/* WhatsApp Button */}
               <div className="flex justify-center">
                 <a
-                  href="https://wa.me/5511919009112?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF."
+                  href="https://wa.me/5511961885415?text=Olá!+Vim+pelo+site+DTF+Rápido+e+gostaria+de+solicitar+um+orçamento+para+impressão+DTF."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                   </svg>
                   <span>Falar no WhatsApp</span>
                 </a>

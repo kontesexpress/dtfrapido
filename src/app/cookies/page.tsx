@@ -11,7 +11,7 @@ export default function CookiesPage() {
       <div className="bg-dark-900/95 backdrop-blur-md border-b border-gold-500/20 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center space-x-4">
-            <Link 
+            <Link
               href="/"
               className="flex items-center space-x-2 text-gold-400 hover:text-gold-300 transition-colors duration-300"
             >
@@ -41,11 +41,11 @@ export default function CookiesPage() {
               <Cookie className="h-6 w-6 text-gold-500" />
               <span className="text-gold-400 font-semibold">Política de Cookies</span>
             </motion.div>
-            
+
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               Política de Cookies
             </h1>
-            
+
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
@@ -69,15 +69,15 @@ export default function CookiesPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">1. O que são Cookies?</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando 
-                  você visita nosso site. Eles nos ajudam a melhorar sua experiência de navegação, 
+                  Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando
+                  você visita nosso site. Eles nos ajudam a melhorar sua experiência de navegação,
                   personalizar conteúdo e analisar o tráfego do site.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">2. Tipos de Cookies Utilizados</h2>
-                
+
                 <div className="space-y-6">
                   <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-gold-400 mb-3">🍪 Cookies Essenciais</h3>
@@ -151,7 +151,7 @@ export default function CookiesPage() {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Você pode controlar e gerenciar cookies de várias formas:
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-dark-700/50 rounded-xl p-6">
                     <h3 className="text-lg font-bold text-white mb-3">🌐 Configurações do Navegador</h3>
@@ -197,8 +197,8 @@ export default function CookiesPage() {
               <section>
                 <h2 className="text-2xl font-bold text-white mb-4">6. Atualizações desta Política</h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Esta política de cookies pode ser atualizada periodicamente para refletir 
-                  mudanças em nossas práticas ou por motivos operacionais, legais ou 
+                  Esta política de cookies pode ser atualizada periodicamente para refletir
+                  mudanças em nossas práticas ou por motivos operacionais, legais ou
                   regulamentares. Recomendamos que você revise esta página regularmente.
                 </p>
               </section>
@@ -211,8 +211,8 @@ export default function CookiesPage() {
                 <div className="bg-gold-500/10 border border-gold-500/20 rounded-xl p-6">
                   <p className="text-gold-300 font-semibold mb-2">Kontes Express</p>
                   <p className="text-gray-300 text-sm">
-                    📧 Email: privacidade@kontesexpress.com<br/>
-                    📱 WhatsApp: +55 (11) 91900-9112<br/>
+                    📧 Email: privacidade@kontesexpress.com<br />
+                    📱 WhatsApp: +55 (11) 96188-5415<br />
                     📍 Endereço: R. Bresser, 601 - Brás, São Paulo - SP
                   </p>
                 </div>

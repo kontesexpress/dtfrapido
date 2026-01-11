@@ -64,7 +64,7 @@ export const PRICING_PLANS = [
 ];
 
 export const CONTACT_INFO = {
-  phone: '+55 (11) 91900-9112',
+  phone: '+55 (11) 96188-5415',
   email: 'kontesexpress@gmail.com',
   address: 'R. Bresser, 601 - Brás, São Paulo - SP, 03017-000',
   hours: 'Segunda à sexta: 8h às 17h | Sábado: 8h às 12h',

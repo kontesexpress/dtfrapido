@@ -49,14 +49,14 @@ export function HotPeelQuality() {
             <span className="text-white">Qualidade </span>
             <span className="gradient-text-gold">Hot Peel</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Nossa tecnologia permite retirada ainda quente da máquina, 
+            Nossa tecnologia permite retirada ainda quente da máquina,
             garantindo acabamento perfeito e cores vibrantes.
           </motion.p>
         </motion.div>
@@ -79,7 +79,7 @@ export function HotPeelQuality() {
                 controls={false}
               />
             </div>
-            
+
             <div className="mt-4 text-center">
               <p className="text-sm text-gray-400">
                 Vídeo: Retirada Hot Peel em tempo real
@@ -100,30 +100,26 @@ export function HotPeelQuality() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
-                className={`flex items-start space-x-4 p-6 rounded-xl transition-all duration-300 ${
-                  feature.highlight
+                className={`flex items-start space-x-4 p-6 rounded-xl transition-all duration-300 ${feature.highlight
                     ? 'bg-gradient-to-r from-gold-500/10 to-gold-600/10 border-2 border-gold-500/30 hover:border-gold-500/50'
                     : 'bg-dark-800/50 border border-gold-500/20 hover:border-gold-500/40'
-                }`}
+                  }`}
               >
-                <div className={`p-3 rounded-full ${
-                  feature.highlight
+                <div className={`p-3 rounded-full ${feature.highlight
                     ? 'bg-gold-500/20'
                     : 'bg-gold-500/10'
-                }`}>
-                  <feature.icon className={`w-6 h-6 ${
-                    feature.highlight
+                  }`}>
+                  <feature.icon className={`w-6 h-6 ${feature.highlight
                       ? 'text-gold-400'
                       : 'text-gold-500'
-                  }`} />
+                    }`} />
                 </div>
-                
+
                 <div>
-                  <h3 className={`text-xl font-bold mb-2 ${
-                    feature.highlight
+                  <h3 className={`text-xl font-bold mb-2 ${feature.highlight
                       ? 'text-gold-300'
                       : 'text-white'
-                  }`}>
+                    }`}>
                     {feature.title}
                     {feature.highlight && (
                       <span className="ml-2 text-sm bg-gold-500/20 text-gold-400 px-2 py-1 rounded-full">
@@ -153,7 +149,7 @@ export function HotPeelQuality() {
                   Envie seu PDF pronto e veja a qualidade Hot Peel na prática
                 </p>
                 <a
-                  href="https://wa.me/5511919009112?text=Olá! Gostaria de solicitar impressão DTF com Hot Peel. Tenho o PDF pronto para envio."
+                  href="https://wa.me/5511961885415?text=Olá! Gostaria de solicitar impressão DTF com Hot Peel. Tenho o PDF pronto para envio."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-colors duration-300"

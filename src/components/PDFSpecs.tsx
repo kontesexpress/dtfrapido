@@ -89,7 +89,7 @@ export function PDFSpecs() {
             <span className="text-white">PDF </span>
             <span className="gradient-text-gold">Pronto para Impressão</span>
           </motion.h2>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -99,7 +99,7 @@ export function PDFSpecs() {
             <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-4 leading-relaxed px-2">
               Para garantir a melhor qualidade, seu arquivo deve seguir nossas especificações técnicas.
             </p>
-            
+
             {/* Dimensão Obrigatória em Destaque */}
             <div className="bg-gradient-to-r from-red-500/20 to-red-600/20 border-2 border-red-500/50 rounded-2xl p-4 mb-6 mx-2">
               <div className="flex items-center justify-center space-x-2 mb-3">
@@ -125,27 +125,24 @@ export function PDFSpecs() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-              className={`group relative bg-gradient-to-br ${
-                req.required
+              className={`group relative bg-gradient-to-br ${req.required
                   ? 'from-green-500/10 to-green-600/10 border-green-500/30'
                   : 'from-blue-500/10 to-blue-600/10 border-blue-500/30'
-              } backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all duration-300`}
+                } backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all duration-300`}
             >
               {/* Ícone */}
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                req.required
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${req.required
                   ? 'bg-green-500/20 text-green-400'
                   : 'bg-blue-500/20 text-blue-400'
-              }`}>
+                }`}>
                 <req.icon className="w-6 h-6" />
               </div>
 
               {/* Conteúdo */}
               <div>
                 <div className="flex items-center space-x-2 mb-2">
-                  <h4 className={`text-lg font-bold ${
-                    req.required ? 'text-green-300' : 'text-blue-300'
-                  }`}>
+                  <h4 className={`text-lg font-bold ${req.required ? 'text-green-300' : 'text-blue-300'
+                    }`}>
                     {req.title}
                   </h4>
                   {req.required && (
@@ -194,12 +191,12 @@ export function PDFSpecs() {
                 PDF no Formato Correto?
               </h3>
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                Envie seu arquivo <span className="text-gold-300 font-bold">57cm de largura, mínimo 1 metro</span> e receba em até 24h 
+                Envie seu arquivo <span className="text-gold-300 font-bold">57cm de largura, mínimo 1 metro</span> e receba em até 24h
                 com a qualidade Hot Peel que você precisa.
               </p>
 
               <motion.a
-                href="https://wa.me/5511919009112?text=Olá! Tenho o PDF pronto para impressão DTF no formato 57cm x 100cm. Seguindo todas as especificações técnicas."
+                href="https://wa.me/5511961885415?text=Olá! Tenho o PDF pronto para impressão DTF no formato 57cm x 100cm. Seguindo todas as especificações técnicas."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

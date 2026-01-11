@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { useInViewSSR } from '@/lib/useInViewSSR';
-import { 
-  Award, 
-  Zap, 
-  Shield, 
-  Palette, 
-  Clock, 
+import {
+  Award,
+  Zap,
+  Shield,
+  Palette,
+  Clock,
   DollarSign,
   Target,
   Heart
@@ -89,14 +89,14 @@ export function Advantages() {
             <span className="text-white">Vantagens da </span>
             <span className="gradient-text-gold">Tecnologia DTF</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
-            Descubra por que a tecnologia DTF é a escolha preferida para 
+            Descubra por que a tecnologia DTF é a escolha preferida para
             personalização de alta qualidade e durabilidade excepcional.
           </motion.p>
         </motion.div>
@@ -118,7 +118,7 @@ export function Advantages() {
               <div className="bg-dark-800/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-6 h-full hover:border-gold-500/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-gold-500/10">
                 {/* Gradient background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${advantage.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`} />
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className={`p-3 bg-gradient-to-br ${advantage.color} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
@@ -128,7 +128,7 @@ export function Advantages() {
                       {advantage.title}
                     </h3>
                   </div>
-                  
+
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
                     {advantage.description}
                   </p>
@@ -165,13 +165,13 @@ export function Advantages() {
                     const message = encodeURIComponent(
                       'Olá! Vim pelo site DTF Rápido e gostaria de solicitar um orçamento para impressão DTF.'
                     );
-                    window.open(`https://wa.me/5511919009112?text=${message}`, '_blank');
+                    window.open(`https://wa.me/5511961885415?text=${message}`, '_blank');
                   }
                 }}
               >
                 WhatsApp - Mais Rápido
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
