@@ -12,6 +12,9 @@ export const SITE_CONFIG = {
   },
 };
 
+export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '883049861338391';
+export const FB_ACCESS_TOKEN = process.env.FB_ACCESS_TOKEN || 'EAAKp4EwYVTUBQaYK7Q9JP8DQossMbTon6fm68Qu7wki2ZB3URaSJ337wM124Tw10JLuj60PZAtoJA3AfEaZAjColyZAEu3Qvvei1F1FD1zGB1KHH36OFlo0ijDa6DeJctTaKer4yvqPyENCgOy3Thw8U6gmtBPzZCQfcZBwXfd5HLnzxmfZBMKQnUiNhZCEW7QZDZD';
+
 export const NAVIGATION = [
   { name: 'Início', href: '#home' },
   { name: 'Sobre DTF', href: '#sobre' },

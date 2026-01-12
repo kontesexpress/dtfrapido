@@ -2,13 +2,14 @@
 
 import { useEffect } from 'react';
 import Script from 'next/script';
+import * as fpixel from '@/lib/fpixel';
 
 // IDs das tags (podem ser configurados via variáveis de ambiente)
 const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || 'G-JC5R2MJY1Y';
 const GOOGLE_ADS_CONVERSION_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || 'AW-17637950542';
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '883049861338391';
+const META_PIXEL_ID = fpixel.FB_PIXEL_ID;
 
 export function Analytics() {
   useEffect(() => {
@@ -20,13 +21,13 @@ export function Analytics() {
     // Configurar Google Tag após carregamento
     const gtag = (window as any).gtag;
     if (gtag) {
-      // Configurar Google Tag (G-JC5R2MJY1Y)
+      // Configurar Google Tag
       gtag('config', GOOGLE_TAG_ID, {
         page_title: 'DTF Rápido by Kontes Express',
         page_location: window.location.href,
       });
 
-      // Configurar Google Analytics 4 se disponível
+      // Configurar Google Analytics 4
       if (GA_MEASUREMENT_ID) {
         gtag('config', GA_MEASUREMENT_ID, {
           page_title: 'DTF Rápido by Kontes Express',
@@ -34,7 +35,7 @@ export function Analytics() {
         });
       }
 
-      // Configurar Google Ads se disponível
+      // Configurar Google Ads
       if (GOOGLE_ADS_CONVERSION_ID) {
         gtag('config', GOOGLE_ADS_CONVERSION_ID, {
           page_title: 'DTF Rápido by Kontes Express',
@@ -52,6 +53,9 @@ export function Analytics() {
         page_location: window.location.href,
       });
     }
+
+    // Facebook CAPI PageView
+    fpixel.pageview();
   }, []);
 
   return (
@@ -121,26 +125,24 @@ export function Analytics() {
       )}
 
       {/* Meta Pixel */}
-      {META_PIXEL_ID && (
-        <Script
-          id="meta-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${META_PIXEL_ID}');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-      )}
+      <Script
+        id="meta-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${META_PIXEL_ID}');
+            // PageView is handled by fpixel.pageview() in useEffect to include CAPI logic
+          `,
+        }}
+      />
     </>
   );
 }

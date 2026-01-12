@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+'use client';
+
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
@@ -6,19 +7,17 @@ import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Contato - DTF Rápido by Kontes Express',
-  description: 'Entre em contato conosco via WhatsApp para solicitar seu orçamento gratuito de impressão DTF. Atendimento especializado e suporte técnico.',
-  keywords: [
-    'contato DTF',
-    'orçamento DTF',
-    'WhatsApp DTF',
-    'atendimento DTF',
-  ],
-};
+import * as fpixel from '@/lib/fpixel';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 export default function ContactPage() {
+  const handleContactClick = () => {
+    trackWhatsAppClick();
+    fpixel.event('Contact', {
+      content_name: 'Contact Page Button',
+      content_category: 'Lead',
+    });
+  };
   return (
     <>
       <JsonLd />
@@ -56,6 +55,7 @@ export default function ContactPage() {
                 href="https://wa.me/5511961885415?text=Olá! Gostaria de solicitar um orçamento para impressão DTF."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleContactClick}
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Image

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import * as fpixel from '@/lib/fpixel';
 import { trackWhatsAppClick } from '@/lib/analytics';
 
 export function WhatsAppButton() {
@@ -14,8 +15,12 @@ export function WhatsAppButton() {
 
   const handleWhatsAppClick = () => {
     if (typeof window !== 'undefined') {
-      // Rastrear conversão do Google Ads
+      // Rastrear eventos (Google e Facebook CAPI)
       trackWhatsAppClick();
+      fpixel.event('Contact', {
+        content_name: 'WhatsApp Button',
+        content_category: 'Lead',
+      });
 
       const message = encodeURIComponent(
         'Olá! Vim pelo site DTF Rápido e gostaria de solicitar um orçamento para impressão DTF.'

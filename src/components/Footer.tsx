@@ -95,10 +95,23 @@ export function Footer() {
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500" />
                   <span className="text-sm sm:text-base">kontesexpress@gmail.com</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-400">
+                <motion.a
+                  href="https://maps.app.goo.gl/YourGoogleMapsLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-gray-400 hover:text-gold-400 transition-colors duration-300 cursor-pointer"
+                  onClick={() => {
+                    import('@/lib/fpixel').then((fpixel) => {
+                      fpixel.event('FindLocation', {
+                        content_name: 'Footer Address',
+                        content_category: 'Location',
+                      });
+                    });
+                  }}
+                >
                   <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-gold-500" />
                   <span className="text-sm sm:text-base">R. Bresser, 601 - Brás, São Paulo - SP</span>
-                </div>
+                </motion.a>
               </motion.div>
             </div>
 
