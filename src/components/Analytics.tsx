@@ -8,7 +8,7 @@ const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || 'G-JC5R2MJY1Y';
 const GOOGLE_ADS_CONVERSION_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || 'AW-17637950542';
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '883049861338391';
 
 export function Analytics() {
   useEffect(() => {

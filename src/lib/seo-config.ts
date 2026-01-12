@@ -171,7 +171,7 @@ export const seoConfig = {
       ],
     },
     metaPixel: {
-      id: process.env.NEXT_PUBLIC_META_PIXEL_ID || 'META_PIXEL_ID',
+      id: process.env.NEXT_PUBLIC_META_PIXEL_ID || '883049861338391',
       events: [
         'PageView',
         'Lead',
