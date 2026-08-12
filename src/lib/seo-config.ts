@@ -6,7 +6,7 @@ export const seoConfig = {
     name: 'DTF Rápido by Kontes Express',
     url: 'https://dtfrapido.com.br',
     description: 'Impressão DTF Premium com brilho, cor e precisão impecável. Tecnologia de ponta para estampas personalizadas de alta qualidade.',
-    logo: 'https://dtfrapido.com.br/images/logo.png',
+    logo: 'https://dtfrapido.com.br/images/logo-Kontes.png.webp',
     ogImage: 'https://dtfrapido.com.br/images/og-image.jpg',
     favicon: 'https://dtfrapido.com.br/favicon.ico',
   },

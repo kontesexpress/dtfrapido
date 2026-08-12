@@ -37,7 +37,7 @@ export function Hero() {
               alt="Kontes Express Logo"
               width={24}
               height={24}
-              className="h-6 w-6 object-contain"
+              className="h-6 w-auto object-contain"
             />
             <Zap className="h-4 w-4" />
             <span>Fornecedor DTF para Profissionais</span>

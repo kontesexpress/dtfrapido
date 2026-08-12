@@ -54,7 +54,7 @@ export function Footer() {
                     <img
                       src="/images/logo-Kontes.png.webp"
                       alt="Kontes Express Logo"
-                      className="h-10 w-10 sm:h-12 sm:w-12 object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gold-500/20 rounded-full blur-lg group-hover:bg-gold-400/30 transition-all duration-300" />
                   </div>

@@ -10,7 +10,7 @@ export const baseSchema = {
   alternateName: 'Kontes Express',
   description: 'Impressão DTF Premium com brilho, cor e precisão impecável. Tecnologia de ponta para estampas personalizadas de alta qualidade.',
   url: 'https://dtfrapido.com.br',
-  logo: 'https://dtfrapido.com.br/images/logo.png',
+  logo: 'https://dtfrapido.com.br/images/logo-Kontes.png.webp',
   image: 'https://dtfrapido.com.br/images/og-image.jpg',
   telephone: '+55-11-96188-5415',
   email: 'kontesexpress@gmail.com',

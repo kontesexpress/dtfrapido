@@ -53,7 +53,7 @@ export function PerformanceOptimizer() {
       const criticalImages = [
         '/images/og-image.jpg',
         '/images/hero-bg.jpg',
-        '/images/logo.png',
+        '/images/logo-Kontes.png.webp',
       ];
 
       criticalImages.forEach(src => {
